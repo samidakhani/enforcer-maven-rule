@@ -7,13 +7,9 @@ import java.util.Enumeration;
 import org.apache.maven.enforcer.rule.api.EnforcerRule;
 import org.apache.maven.enforcer.rule.api.EnforcerRuleException;
 import org.apache.maven.enforcer.rule.api.EnforcerRuleHelper;
-import org.apache.maven.execution.MavenSession;
 import org.apache.maven.plugin.logging.Log;
 import org.apache.maven.project.MavenProject;
-import org.apache.maven.rtinfo.RuntimeInformation;
 import org.codehaus.plexus.component.configurator.expression.ExpressionEvaluationException;
-import org.codehaus.plexus.component.repository.exception.ComponentLookupException;
-import org.sonatype.aether.impl.ArtifactResolver;
 
 /**
  * @author Sami Dakhani Created on Nov 13, 2016
@@ -35,25 +31,7 @@ public class NetworkConnectorRule implements EnforcerRule {
 		try {
 
 			MavenProject project = (MavenProject) helper.evaluate("${project}");
-			MavenSession session = (MavenSession) helper.evaluate("${session}");
-
-			String target = (String) helper
-					.evaluate("${project.build.directory}");
-			String artifactId = (String) helper
-					.evaluate("${project.artifactId}");
-
-			ArtifactResolver artifactResolver = (ArtifactResolver) helper
-					.getComponent(ArtifactResolver.class);
-			RuntimeInformation runtimeInfo = (RuntimeInformation) helper
-					.getComponent(RuntimeInformation.class);
-
-			log.info("Retrieved Project: " + project);
-			log.info("Retrieved ArtifactId: " + artifactId);
-			log.info("Retrieved Session: " + session);
-			log.info("Retrieved Target Folder: " + target);
-
-			log.info("Retrieved Resolver: " + artifactResolver);
-			log.info("Retrieved RuntimeInfo: " + runtimeInfo);
+			log.info(project.toString());
 
 			if (this.checkNetwork) {
 				boolean isActive = this.isNetworkActive();
@@ -69,10 +47,6 @@ public class NetworkConnectorRule implements EnforcerRule {
 		} catch (SocketException e) {
 			throw new EnforcerRuleException(
 					"SocketException " + e.getLocalizedMessage(), e);
-		} catch (ComponentLookupException e) {
-			throw new EnforcerRuleException(
-					"Unable to lookup a component " + e.getLocalizedMessage(),
-					e);
 		} catch (ExpressionEvaluationException e) {
 			throw new EnforcerRuleException(
 					"Unable to lookup an expression " + e.getLocalizedMessage(),
