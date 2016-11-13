@@ -37,10 +37,10 @@ public class NetworkConnectorRule implements EnforcerRule {
 				boolean isActive = this.isNetworkActive();
 
 				if (isActive) {
-					log.info("Connected to internet");
+					log.info("Machine is connected to network");
 				} else {
 					throw new EnforcerRuleException(
-							"Not connected to internet");
+							"Machine not connected to network");
 				}
 			}
 
