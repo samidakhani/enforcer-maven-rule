@@ -5,7 +5,7 @@
 
 	<groupId>org.dakhani.learn</groupId>
 	<artifactId>enforcer-maven-rule</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 
 	<name>enforcer-maven-rule</name>
 	<description>A maven-enforcer-plugin rule to determine internet connectivity</description>
