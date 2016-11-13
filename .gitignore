@@ -1,0 +1,10 @@
+/.git
+/.settings
+/target
+/bin
+*.classpath
+*.project
+*.class
+.checkstyle
+/.sonar
+
