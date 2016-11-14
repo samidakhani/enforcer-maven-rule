@@ -1,5 +1,5 @@
 # enforcer-maven-rule
-   A customized rule for maven-enforcer-plugin to check if the machine is connected to network.
+   A customized rule for maven-enforcer-plugin to check if the **machine is connected to network**.
 	
 # Usage
    		   <plugin>
@@ -14,7 +14,7 @@
 							<goal>enforce</goal>
 						</goals>
 						<configuration>
-							__<rules>
+							<rules>
 								<networkConnectorRule
 									implementation="org.dakhani.learn.enforcer.rule.NetworkConnectorRule">
 									<checkNetwork>true</checkNetwork>
