@@ -1,8 +1,7 @@
 # enforcer-maven-rule
-	A customized rule for maven-enforcer-plugin to check if the machine is connected to network.
+   A customized rule for maven-enforcer-plugin to check if the machine is connected to network.
 	
 # Usage
-    ```
    		   <plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -32,6 +31,4 @@
 					</dependency>
 				</dependencies>
 			</plugin>
-    
-    ```
 	
