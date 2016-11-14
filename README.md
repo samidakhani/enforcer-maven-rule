@@ -14,12 +14,12 @@
 							<goal>enforce</goal>
 						</goals>
 						<configuration>
-							<rules>
+							**<rules>
 								<networkConnectorRule
 									implementation="org.dakhani.learn.enforcer.rule.NetworkConnectorRule">
 									<checkNetwork>true</checkNetwork>
 								</networkConnectorRule>
-							</rules>
+							</rules>**
 						</configuration>
 					</execution>
 				</executions>
