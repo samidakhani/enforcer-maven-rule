@@ -14,12 +14,12 @@
 							<goal>enforce</goal>
 						</goals>
 						<configuration>
-							**<rules>
+							__<rules>
 								<networkConnectorRule
 									implementation="org.dakhani.learn.enforcer.rule.NetworkConnectorRule">
 									<checkNetwork>true</checkNetwork>
 								</networkConnectorRule>
-							</rules>**
+							</rules>__
 						</configuration>
 					</execution>
 				</executions>
@@ -33,5 +33,5 @@
 			</plugin>
 	
 # Motivation
-  Often our code relies on network-connectivity to perform business-logic; for-example: to utilize third party APIs.
+  Often our code relies on **network-connectivity** to perform business-logic; for-example: to utilize third party APIs.
   This rule is beneficial in such cases, where you need to validate that your machine is connected to the network.
