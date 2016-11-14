@@ -36,8 +36,9 @@
   Often our code relies on **network-connectivity** to perform business-logic; for-example: to utilize third party APIs.
   This rule is beneficial in such cases, where you need to validate that your machine is connected to the network.
   
-# Installation
+# Installation and Usage
    * Download the project 
    * Navigate to the directory **cd enforcer-maven-plugin**
    * Deploy the artifact **mvn clean deploy**
    * Utilize the snippet provided above in **pom.xml**
+   * The rule is validated in the **validate** phase of maven **build-lifecycle**
