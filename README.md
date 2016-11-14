@@ -39,6 +39,7 @@
 # Installation and Usage
    * Download the project 
    * Navigate to the directory **cd enforcer-maven-plugin**
+   * You might need to change the maven **respository** and **snapshotRepository** url in the **distributionManagement** section of **pom.xml**
    * Deploy the artifact **mvn clean deploy**
    * Utilize the snippet provided above in **pom.xml**
    * The rule is validated in the **validate** phase of maven **build-lifecycle**
